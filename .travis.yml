@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t promact/node-docker .
+  - docker login
+  - docker push promact/node-docker
